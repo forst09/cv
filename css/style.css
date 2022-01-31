@@ -1,0 +1,218 @@
+html {
+    font-size: 15px;
+}
+body {
+    background-color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-weight: 500;
+}
+.container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1480px;
+    height: 100vh;
+}
+.title {
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.container__item {
+    max-width: 460px;
+}
+.info__name {
+    margin-top: 0;
+    margin-bottom: 65px;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 75px;
+}
+.info__characteristics {
+    margin-bottom: 11px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info__characteristics-item {
+    margin-bottom: 30px;
+    flex-basis: 44%;
+}
+.info__characteristics-name {
+    margin: 4px 0 4px;
+    line-height: 25px;
+    opacity: 0.6;
+}
+.info__characteristics-text {
+    margin: 0;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+progress {
+    border: 0;
+    height: 7px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+progress::-webkit-progress-bar {
+    border: 0;
+    height: 7px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: #fff;
+}
+progress::-moz-progress-bar {
+    border: 0;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.info__progressbar{
+    margin-bottom: 28px;
+}
+.info__progressbar:nth-last-child(1) {
+    margin-bottom: 0;
+}
+.info__progressbar-name {
+    opacity: 0.8;
+    margin-top: 23px;
+    line-height: 0;
+    margin-bottom: 3px;
+}
+.about__text {
+    margin-top: 10px;
+    margin-bottom: 43px;
+    line-height: 25px;
+    opacity: 0.8;
+}
+.about__text:nth-last-child(1) {
+    margin-bottom: 0;
+}
+.about__list {
+    margin-bottom: 40px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.about__list-item{
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 14px;
+}
+.about__list-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.photo__wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.photo__image {
+    border-radius: 7px;
+    width: 100%;
+}
+.photo__quote {
+    position: absolute;
+    margin: 0;
+    padding: 2rem 2.6em 2rem 3.35rem;
+    bottom: 3.86rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 35px;
+    text-indent: -1rem;
+}
+.photo__quote::before {
+    content: '“';
+    margin-right: 3px;
+}
+.photo__quote::after {
+    content: '”';
+    margin-left: -4px;
+}
+
+@media(max-width:1460px) {
+    html {
+        font-size: 12px;
+    }
+    .container__item {
+        max-width: 380px;
+    }
+}
+@media(max-width:1210px) {
+    .container {
+       flex-wrap: wrap;
+       justify-content: space-around;
+       padding: 0;
+       padding-bottom: 2rem;
+    }
+    .photo {
+        order: 2;
+    }
+    .photo__quote {
+        padding: 2rem 4.6rem 2rem 3.35rem;
+        box-sizing: border-box;
+    }
+    .info {
+        order: 1;
+    }
+    .about {
+        margin-top: 20px;
+        order: 3;
+        max-width: 60%;
+    }
+}
+@media(max-width:830px) {
+    .container {
+        height: auto;
+        max-width: 483px;
+    }
+    .container__item {
+        max-width: 100%;
+    }
+    .photo {
+        margin-bottom: 40px;
+        order: 1;
+    }
+    .info {
+        order: 2;
+    }
+    .about {
+        margin-top: 40px;
+    }
+} 
+@media(max-width:540px) {
+    .container__item {
+        width: 100%;
+    }
+    .photo__image {
+        height: 100vh;
+        object-fit: cover;
+    }
+    .photo__quote {
+        padding: 2rem 2.6rem 2rem 2.35rem;
+        bottom: 2.86rem;
+    }
+}
