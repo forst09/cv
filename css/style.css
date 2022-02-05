@@ -152,7 +152,7 @@ progress::-moz-progress-bar {
 }
 .photo__quote::after {
     content: '”';
-    margin-left: -4px;
+    margin-left: 3px;
 }
 
 @media(max-width:1460px) {
